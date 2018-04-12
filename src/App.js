@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import {Row,Col,Jumbotron} from 'react-bootstrap';
 import './App.css';
+import {Row,Col,Jumbotron} from 'react-bootstrap';
 
 class App extends Component {
 
@@ -38,19 +38,8 @@ class App extends Component {
     return (
       <div>
               <Jumbotron>
-                <h3>Star Wars</h3>
                   <Row>
-                   <Col xs={2}></Col>
-                   <Col xs={2}>
-                      <a href="https://github.com/davideliason/favorite-books-react-redux-firebase">Repo</a>
-                   </Col>
-
-                   <Col xs={2}></Col>
-                    <Col xs={2}>
-                      <a href="https://github.com/davideliason/davideliason.github.io">Github Portfolio</a>
-                    </Col>
-                   <Col xs={2}>
-                   </Col>
+                     <h3>Star Wars</h3>
                  </Row>
               </Jumbotron>
 
