@@ -1,8 +1,8 @@
 # Star Wars Info
 ## Using React + Redux + API
 ### Grabbing data from cloud-based API source
-#### March 27, 2018
-#### [David Eliason](http://www.davethemaker.com)
+#### March 27 - April 12, 2018
+#### Maker: [David Eliason](http://www.davethemaker.com)
 
 ### Goal:
 
