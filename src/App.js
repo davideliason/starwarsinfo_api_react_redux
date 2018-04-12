@@ -6,7 +6,7 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { items: [], text: 'green' };
+    this.state = { planets: [] };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -37,13 +37,13 @@ class App extends Component {
   render() {
     return (
       <div>
-              <Jumbotron>
-                  <Row>
-                     <h3>Star Wars</h3>
-                 </Row>
-              </Jumbotron>
+        <Jumbotron>
+          <Row>
+             <h3>Star Wars</h3>
+          </Row>
+        </Jumbotron>
 
-        <TodoList items={this.state.items} />
+        <PlanetList planets={this.state.planets} />
 
         <form onSubmit={this.handleSubmit} >
           <input 
@@ -51,7 +51,7 @@ class App extends Component {
           value={this.state.text}
           />
            <button>
-            Add a Todo Item:  #{this.state.items.length + 1}
+            Get Another Planet
           </button>
         </form>
       </div>
@@ -59,12 +59,12 @@ class App extends Component {
   }
 }
 
-class TodoList extends Component{
+class PlanetList extends Component{
   render(){
     return (
       <ul>
-         {this.props.items.map(item => (
-          <li key={item.id}>{item.text}</li>
+         {this.props.planets.map(item => (
+          <li key={planet.id}>{planet.name}</li>
         ))}
       </ul>
 
