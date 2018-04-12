@@ -1,5 +1,5 @@
 # Star Wars Info
-## Using React + Redux
+## Using React + Redux + API
 ### Grabbing data from cloud-based API source
 #### March 27, 2018
 #### [David Eliason](http://www.davethemaker.com)
