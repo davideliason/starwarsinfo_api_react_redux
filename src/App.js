@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Row,Col,Jumbotron} from 'react-bootstrap';
 import './App.css';
 
 class App extends Component {
@@ -36,6 +37,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Jumbotron>
+           <h3>Star Wars!</h3>
+        </Jumbotron>
 
         <TodoList items={this.state.items} />
 
