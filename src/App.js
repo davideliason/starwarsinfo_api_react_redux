@@ -6,7 +6,7 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { planets: [] };
+    this.state = { planets: [], name: "earth" };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -16,21 +16,21 @@ class App extends Component {
   // }
 
    handleChange(e) {
-    this.setState({ text: e.target.value });
+    this.setState({ name: e.target.value });
   }
 
    handleSubmit(e) {
     e.preventDefault();
-    if (!this.state.text.length) {
+    if (!this.state.name.length) {
       return;
     }
-    const newItem = {
-      text: this.state.text,
+    const newPlanet = {
+      name: this.state.name,
       id: Date.now()
     };
     this.setState(prevState => ({
-      items: prevState.items.concat(newItem),
-      text: ''
+      planets: prevState.items.concat(newPlanet),
+      name: ''
     }));
   }
 
@@ -39,7 +39,7 @@ class App extends Component {
       <div>
         <Jumbotron>
           <Row>
-             <h3>Star Wars</h3>
+             <h3>Star Wars: Planets</h3>
           </Row>
         </Jumbotron>
 
@@ -48,7 +48,7 @@ class App extends Component {
         <form onSubmit={this.handleSubmit} >
           <input 
           onChange={this.handleChange}
-          value={this.state.text}
+          value={this.state.name}
           />
            <button>
             Get Another Planet
@@ -63,7 +63,7 @@ class PlanetList extends Component{
   render(){
     return (
       <ul>
-         {this.props.planets.map(item => (
+         {this.props.planets.map(planet => (
           <li key={planet.id}>{planet.name}</li>
         ))}
       </ul>
