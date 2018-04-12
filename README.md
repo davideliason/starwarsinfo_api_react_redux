@@ -7,15 +7,15 @@
 ### Goal:
 
 Build react + redux infrastructure to display info.
-Behind the scenes, grab data from API.
-Front-end only for version one. 
+Behind the scenes, grab data from API. 
 
 ### Learning Mission:
 
 Working with cloud-based data is an important conceptual piece of a bigger project that I'm working on for Maker's Faire, called [IoT Empoering Me](http://www.mysticmonklabs.com/iotempoweringme) - an IoT + App product to empower individuals within the community.
 
+- Version one with be front-end UI emphasis.
 - Version two will be for building a Native app.
-- Version three will tie in back-end DB, possible routing using express and node.
+- Version three will tie in data persistence, possible routing using express and node.
 
 ### Practicuum:
 
