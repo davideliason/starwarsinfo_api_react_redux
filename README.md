@@ -9,6 +9,8 @@
 Build react + redux infrastructure to display info.
 Behind the scenes, grab data from API. 
 
+[Return to Portfolio](https://davideliason.github.io/)
+
 ### Learning Mission:
 
 Working with cloud-based data is an important conceptual piece of a bigger project that I'm working on for Maker's Faire, called [IoT Empoering Me](http://www.mysticmonklabs.com/iotempoweringme) - an IoT + App product to empower individuals within the community.
@@ -19,4 +21,5 @@ Working with cloud-based data is an important conceptual piece of a bigger proje
 
 ### Practicuum:
 
+1. use create-react-app for template app structure
 
