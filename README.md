@@ -23,5 +23,8 @@ Working with cloud-based data is an important conceptual piece of a bigger proje
 
 1. use create-react-app for template app structure
 2. [Add CRA to Heroku](https://gist.github.com/mars/5e01bb2a074594b44870cb087f54fe2f)
+3. [Heroku live](https://polar-shelf-77447.herokuapp.com/)
+4. 
+
 
 
