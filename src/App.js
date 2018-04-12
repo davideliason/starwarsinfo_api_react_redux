@@ -45,7 +45,7 @@ class App extends Component {
           value={this.state.text}
           />
            <button>
-            Add a Todo Item #{this.state.items.length + 1}
+            Add a Todo Item:  #{this.state.items.length + 1}
           </button>
         </form>
       </div>
