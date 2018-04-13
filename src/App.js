@@ -6,14 +6,27 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { planets: [], name: "earth" };
+    this.state = { pictures: [] };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  // componentDidMount(){
-  //   this.setState({items: 1})
-  // }
+  componentDidMount(){
+    fetch('https://randomuser.me/api/?results=5')
+    .then(results => {
+      return results.json();
+    }).then(data => {
+      let pictures = data.results.map((pic) => {
+        return (
+          <div key={pic.results}>
+             <p> {pic.picture.medium}</p>
+          </div>
+          )
+      })
+      this.setState({pictures: pictures})
+      console.log("planets", this.state.planets);
+    })
+  }
 
    handleChange(e) {
     this.setState({ name: e.target.value });
@@ -42,8 +55,8 @@ class App extends Component {
              <h3>Star Wars: Planets</h3>
           </Row>
         </Jumbotron>
+          {this.state.pictures}
 
-        <PlanetList planets={this.state.planets} />
 
         <form onSubmit={this.handleSubmit} >
           <input 
