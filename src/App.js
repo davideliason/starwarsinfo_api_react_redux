@@ -8,7 +8,7 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { planet: "", planetName : "", searchName:""};
+    this.state = {  planets: [], planet: "", planetName : "", searchName:""};
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
