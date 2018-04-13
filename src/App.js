@@ -14,13 +14,13 @@ class App extends Component {
 
   componentDidMount(){
 
-    fetch('https://swapi.co/api/planets/1')
+    fetch('https://swapi.co/api/planets/?search=Tatooine')
     .then(response => {
       return response.json();
     })
     .then(myJson => {
-      console.log(myJson);
-      this.setState({planets: myJson})
+      console.log(myJson.results[0].name);
+      this.setState({planets: myJson.results[0].name})
     })
   }
 
@@ -52,7 +52,7 @@ class App extends Component {
              <h3>Star Wars: Planets</h3>
           </Row>
         </Jumbotron>
-          {this.state.planets.name}
+          {this.state.planets}
 
 
         <form onSubmit={this.handleSubmit} >
