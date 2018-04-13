@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import {Row,Col,Jumbotron} from 'react-bootstrap';
 
+const API = 'https://swapi.co/api/planets/?search=';
+
 class App extends Component {
 
   constructor(props) {
@@ -14,7 +16,9 @@ class App extends Component {
 
   componentDidMount(){
 
-    fetch('https://swapi.co/api/planets/?search=Tatooine')
+    const planetSearch = 'Hoth';
+
+    fetch(API + planetSearch)
     .then(response => {
       return response.json();
     })
