@@ -11,6 +11,8 @@ Behind the scenes, grab data from API.
 
 [Return to Portfolio](https://davideliason.github.io/)
 
+[Heroku Hosted]('https://polar-shelf-77447.herokuapp.com/')
+
 ### Learning Mission:
 
 Working with cloud-based data is an important conceptual piece of a bigger project that I'm working on for Maker's Faire, called [IoT Empoering Me](http://www.mysticmonklabs.com/iotempoweringme) - an IoT + App product to empower individuals within the community.
@@ -26,6 +28,8 @@ Working with cloud-based data is an important conceptual piece of a bigger proje
 3. [Heroku live](https://polar-shelf-77447.herokuapp.com/)
 4.  Use Postman to get a sample API Get Call and figure out which datapoints to access in fetch calls
 5. add Bootstrap and UI rendering of data as well and input fields
+
+Action Shot! 
 
 ![Star Wars React](./StarWarsReact.png)
 
