@@ -49,9 +49,16 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Jumbotron>
+        <Grid>
+         <Jumbotron>
           <Row>
-             <h3>Star Wars: Planets</h3>
+            <Col xs={6}>
+             <h3>Star Wars</h3>
+            </Col>
+            <Col xs={6}>
+             <h3>Planets</h3>
+             <h4>Everything You wanted to know</h4>
+            </Col>
           </Row>
         </Jumbotron>
           <p>Planet: {this.state.planetName}</p>
@@ -63,6 +70,7 @@ class App extends Component {
           <input 
           onChange={this.handleChange}
           value={this.state.searchName}
+          placeholder="planet name"
           />
 
           <label>Find another planet</label>
@@ -73,10 +81,11 @@ class App extends Component {
                <option value="Endor">Endor</option>
              </select>
 
-           <Button bsStyle="primary">
-            Get Another Planet
-          </Button>
+           <button>
+            Search
+          </button>
         </form>
+       </Grid>
       </div>
     );
   }
