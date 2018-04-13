@@ -6,7 +6,7 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { planets: [], number : "", name : ""};
+    this.state = { planets: "", number : "", name : ""};
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -19,7 +19,8 @@ class App extends Component {
       return response.json();
     })
     .then(myJson => {
-      console.log(myJson)
+      console.log(myJson);
+      this.setState({planets: myJson})
     })
   }
 
@@ -51,7 +52,7 @@ class App extends Component {
              <h3>Star Wars: Planets</h3>
           </Row>
         </Jumbotron>
-          {this.state.pictures}
+          {this.state.planets.name}
 
 
         <form onSubmit={this.handleSubmit} >
