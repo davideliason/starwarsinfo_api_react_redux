@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {Row,Col,Jumbotron} from 'react-bootstrap';
+import {Row,Col,Jumbotron,Grid} from 'react-bootstrap';
 
 const API = 'https://swapi.co/api/planets/?search=';
 
@@ -49,9 +49,15 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Jumbotron>
+        <Grid>
+         <Jumbotron>
           <Row>
-             <h3>Star Wars: Planets</h3>
+            <Col xs={6}>
+              <h1>Star Wars</h1>
+            </Col>
+            <Col xs={6}>
+               <h3> Planets: Everything you need to know! </h3>
+            </Col>
           </Row>
         </Jumbotron>
           <p>Planet: {this.state.planetName}</p>
@@ -77,6 +83,7 @@ class App extends Component {
             Get Another Planet
           </button>
         </form>
+        </Grid>
       </div>
     );
   }
