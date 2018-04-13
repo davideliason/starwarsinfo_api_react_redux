@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {Row,Col,Jumbotron} from 'react-bootstrap';
+import {Row,Col,Jumbotron,Grid,Button} from 'react-bootstrap';
 
 const API = 'https://swapi.co/api/planets/?search=';
 
@@ -73,9 +73,9 @@ class App extends Component {
                <option value="Endor">Endor</option>
              </select>
 
-           <button>
+           <Button bsStyle="primary">
             Get Another Planet
-          </button>
+          </Button>
         </form>
       </div>
     );
