@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {Row,Col,Jumbotron,Grid} from 'react-bootstrap';
+import {Row,Col,Jumbotron,Button,Grid} from 'react-bootstrap';
 
 const API = 'https://swapi.co/api/planets/?search=';
 
@@ -56,9 +56,10 @@ class App extends Component {
               <h1>Star Wars</h1>
             </Col>
             <Col xs={6}>
-               <h3> Planets: Everything you need to know! </h3>
+               <h3> Planets </h3> <h4>Everything you need to know! </h4>
             </Col>
           </Row>
+
         </Jumbotron>
           <p>Planet: {this.state.planetName}</p>
           <p>Climate: {this.state.planet.climate}</p>
@@ -69,9 +70,9 @@ class App extends Component {
           <input 
           onChange={this.handleChange}
           value={this.state.searchName}
+          placeholder = "planet name here"
           />
 
-          <label>Find another planet</label>
              <select value={this.state.searchName} onChange={this.handleChange}>
                <option value="Alderaan">Alderaan</option>
                <option value="Hoth">Hoth</option>
@@ -79,9 +80,9 @@ class App extends Component {
                <option value="Endor">Endor</option>
              </select>
 
-           <button>
+           <Button bsStyle="success">
             Get Another Planet
-          </button>
+          </Button>
         </form>
         </Grid>
       </div>
