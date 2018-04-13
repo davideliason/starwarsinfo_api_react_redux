@@ -27,5 +27,7 @@ Working with cloud-based data is an important conceptual piece of a bigger proje
 4.  Use Postman to get a sample API Get Call and figure out which datapoints to access in fetch calls
 5. add Bootstrap and UI rendering of data as well and input fields
 
+![Star Wars React]('./StarWarsReact.png')
+
 
 
