@@ -21,7 +21,7 @@ class App extends Component {
       let pictures = data.results.map((pic) => {
         return (
           <div key={pic.results}>
-             <p> {pic.picture.medium}</p>
+             <img src={pic.picture.medium} />
           </div>
           )
       })
