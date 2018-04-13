@@ -6,7 +6,7 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { pictures: [], number : 20};
+    this.state = { planets: [], number : "", name : ""};
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -14,19 +14,12 @@ class App extends Component {
 
   componentDidMount(){
 
-    fetch('https://randomuser.me/api/?results=20')
-    .then(results => {
-      return results.json();
-    }).then(data => {
-      let pictures = data.results.map((pic) => {
-        return (
-          <div key={pic.results}>
-             <img src={pic.picture.medium} />
-          </div>
-          )
-      })
-      this.setState({pictures: pictures})
-      console.log("planets", this.state.planets);
+    fetch('https://swapi.co/api/planets/1')
+    .then(response => {
+      return response.json();
+    })
+    .then(myJson => {
+      console.log(myJson)
     })
   }
 
@@ -39,6 +32,7 @@ class App extends Component {
     if (!this.state.name.length) {
       return;
     }
+
     const newPlanet = {
       name: this.state.name,
       id: Date.now()
