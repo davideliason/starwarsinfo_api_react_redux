@@ -64,6 +64,15 @@ class App extends Component {
           onChange={this.handleChange}
           value={this.state.searchName}
           />
+
+          <label>Find another planet</label>
+             <select value={this.state.searchName} onChange={this.handleChange}>
+               <option value="Alderaan">Alderaan</option>
+               <option value="Hoth">Hoth</option>
+               <option value="Bespin">Bespin</option>
+               <option value="Endor">Endor</option>
+             </select>
+
            <button>
             Get Another Planet
           </button>
