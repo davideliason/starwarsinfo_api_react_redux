@@ -16,7 +16,11 @@ class App extends Component {
 
   componentDidMount(){
 
-    const planetSearch = 'Hoth';
+    this.getAPICall();
+  }
+
+  getAPICall() {
+    const planetSearch = this.state.name;
 
     fetch(API + planetSearch)
     .then(response => {
@@ -38,14 +42,9 @@ class App extends Component {
       return;
     }
 
-    const newPlanet = {
-      name: this.state.name,
-      id: Date.now()
-    };
-    this.setState(prevState => ({
-      planets: prevState.items.concat(newPlanet),
-      name: ''
-    }));
+    const newName = this.state.name;
+
+    this.setState({ name: newName});
   }
 
   render() {
