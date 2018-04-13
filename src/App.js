@@ -56,6 +56,7 @@ class App extends Component {
         </Jumbotron>
           <p>Planet: {this.state.planetName}</p>
           <p>Climate: {this.state.planet.climate}</p>
+          <p>Gravity: {this.state.planet.gravity}</p>
 
 
         <form onSubmit={this.handleSubmit} >
