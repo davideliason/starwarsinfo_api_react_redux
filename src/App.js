@@ -6,13 +6,15 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { pictures: [] };
+    this.state = { pictures: [], number : 1};
+
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount(){
-    fetch('https://randomuser.me/api/?results=5')
+
+    fetch('https://randomuser.me/api/?results={this.state.number}')
     .then(results => {
       return results.json();
     }).then(data => {
