@@ -29,6 +29,12 @@ Working with cloud-based data is an important conceptual piece of a bigger proje
 4.  Use Postman to get a sample API Get Call and figure out which datapoints to access in fetch calls
 5. add Bootstrap and UI rendering of data as well and input fields
 
+#### Redux
+6. add redux, react-redux, redux-logger, redux-thunk
+7. File structure: add parent common folder, with these sub-folders: redux (actions, reducers) and containers.
+7.1 create appContainer to wrap App component
+7.2 create store using rootReducer and applying middleware
+
 Action Shot! 
 
 ![Star Wars React](./StarWarsReact.png)
